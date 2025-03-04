@@ -34,3 +34,17 @@ console.log(isValidEmailUC3("abc@bridgelabzcom"));
 console.log(isValidEmailUC3("abc@bridgelabz"));         
 console.log(isValidEmailUC3("abc@xyz.co"));            
 console.log(isValidEmailUC3("abc@bridgelabz.co.in"));
+
+// UC4: Handle optional part (xyz) with valid special characters (_,+,-,.)
+function isValidEmailUC4(email) {
+    let pattern = /^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@bridgelabz\.co$/;
+    return pattern.test(email);
+}
+
+// Test Cases for UC3
+console.log(isValidEmailUC4("abc@bridgelabz.co"));       
+console.log(isValidEmailUC4("abc.xyz@bridgelabz.co"));    
+console.log(isValidEmailUC4("abc-xyz@bridgelabz.co"));    
+console.log(isValidEmailUC4("abc+xyz@bridgelabz.co"));    
+console.log(isValidEmailUC4("abc#xyz@bridgelabz.co"));    
+
