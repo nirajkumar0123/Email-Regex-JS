@@ -20,3 +20,17 @@ console.log(isValidEmailUC2("abc@bridgelabz"));
 console.log(isValidEmailUC2("abc.xyz@bridgelabz"));  
 console.log(isValidEmailUC2("abc-xyz@bridgelabz"));  
 console.log(isValidEmailUC2("abc+xyz@bridgelabz"));  
+
+// UC3: Ensure "." after bridgelabz and validate mandatory 3rd part (co)
+function isValidEmailUC3(email) {
+    let pattern = /^[a-zA-Z0-9]+@bridgelabz\.co$/;
+    return pattern.test(email);
+}
+
+// Test Cases for UC3
+console.log(isValidEmailUC3("abc@bridgelabz.co"));   
+console.log(isValidEmailUC3("abc.xyz@bridgelabz.co"));  
+console.log(isValidEmailUC3("abc@bridgelabzcom"));      
+console.log(isValidEmailUC3("abc@bridgelabz"));         
+console.log(isValidEmailUC3("abc@xyz.co"));            
+console.log(isValidEmailUC3("abc@bridgelabz.co.in"));
