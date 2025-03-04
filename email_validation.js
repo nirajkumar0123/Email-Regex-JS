@@ -5,18 +5,18 @@ function isValidEmailUC1(email) {
 }
 
 // Test Cases for UC 1
-console.log(isValidEmailUC1("abc@bridgelabz")); 
-console.log(isValidEmailUC1("abc@xyz"));         
-console.log(isValidEmailUC1("abcxyz@bridgelabz"));
+// console.log(isValidEmailUC1("abc@bridgelabz")); 
+// console.log(isValidEmailUC1("abc@xyz"));         
+// console.log(isValidEmailUC1("abcxyz@bridgelabz"));
 
-
-// UC 2: Ensure "." after bridgelabz and validate mandatory third part (co)
+// UC2: Ensure @ and validate mandatory 2nd part (bridgelabz)
 function isValidEmailUC2(email) {
-    let pattern = /^[a-zA-Z0-9]+@bridgelabz\.co$/;
+    let pattern = /^[a-zA-Z0-9]+@bridgelabz$/;
     return pattern.test(email);
 }
 
-// Test Cases for UC 2
-console.log(isValidEmailUC2("abc@bridgelabz.co")); 
-console.log(isValidEmailUC2("abc@bridgelabzcom"));
-console.log(isValidEmailUC2("abc@xyz.co"));
+// Test Cases for UC2
+console.log(isValidEmailUC2("abc@bridgelabz"));     
+console.log(isValidEmailUC2("abc.xyz@bridgelabz"));  
+console.log(isValidEmailUC2("abc-xyz@bridgelabz"));  
+console.log(isValidEmailUC2("abc+xyz@bridgelabz"));  
