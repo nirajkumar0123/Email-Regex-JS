@@ -5,9 +5,9 @@ function isValidEmailUC1(email) {
 }
 
 // Test Cases for UC 1
-// console.log(isValidEmailUC1("abc@bridgelabz")); 
-// console.log(isValidEmailUC1("abc@xyz"));         
-// console.log(isValidEmailUC1("abcxyz@bridgelabz"));
+console.log(isValidEmailUC1("abc@bridgelabz")); 
+console.log(isValidEmailUC1("abc@xyz"));         
+console.log(isValidEmailUC1("abcxyz@bridgelabz"));
 
 // UC2: Ensure @ and validate mandatory 2nd part (bridgelabz)
 function isValidEmailUC2(email) {
