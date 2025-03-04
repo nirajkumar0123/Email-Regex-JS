@@ -48,3 +48,14 @@ console.log(isValidEmailUC4("abc-xyz@bridgelabz.co"));
 console.log(isValidEmailUC4("abc+xyz@bridgelabz.co"));    
 console.log(isValidEmailUC4("abc#xyz@bridgelabz.co"));    
 
+// UC5: Support optional last part (TLD with 2 characters)
+function isValidEmailUC5(email) {
+    let pattern = /^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@bridgelabz\.co(\.[a-zA-Z]{2})?$/;
+    return pattern.test(email);
+}
+
+// Test Cases for UC5
+console.log(isValidEmailUC5("abc@bridgelabz.co"));        
+console.log(isValidEmailUC5("abc.xyz@bridgelabz.co"));   
+console.log(isValidEmailUC5("abc-xyz@bridgelabz.co.in")); 
+console.log(isValidEmailUC5("abc+xyz@bridgelabz.co.us"));
