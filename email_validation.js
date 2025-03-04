@@ -41,7 +41,7 @@ function isValidEmailUC4(email) {
     return pattern.test(email);
 }
 
-// Test Cases for UC3
+// Test Cases for UC4
 console.log(isValidEmailUC4("abc@bridgelabz.co"));       
 console.log(isValidEmailUC4("abc.xyz@bridgelabz.co"));    
 console.log(isValidEmailUC4("abc-xyz@bridgelabz.co"));    
